@@ -34,6 +34,10 @@
     // Update the user interface for the detail item.
 
     if (self.detailItem) {
+        
+        detailDescription.text = [NSString stringWithFormat:@"%@", [_detailItem description]];
+        detailFirstName.text = [NSString stringWithFormat:@"%@", [_detailItem firstName]];
+        detailLastName.text = [NSString stringWithFormat:@"%@", [_detailItem lastName]];
     }
 }
 

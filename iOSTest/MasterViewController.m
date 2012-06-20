@@ -104,6 +104,17 @@
     UITableViewCell* cell = sender;
     NSInteger row = [self.tableView indexPathForCell:cell].row;
     DeveloperModel *developerModel = [_dataSource objectAtIndex:row];
+    
+    if ([[segue identifier] isEqualToString:@"ShowDetails"]) {
+        DetailViewController *destinationController = [segue destinationViewController];
+        destinationController.detailItem = developerModel;
+    }
+    else {
+        EditDetailViewController *destinationController = [segue destinationViewController];
+        destinationController.detailItem = developerModel;
+
+    }
+    
 }
 
 

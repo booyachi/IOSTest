@@ -10,9 +10,14 @@
 
 @class DeveloperModel;
 
-@interface DetailViewController : UIViewController
+@interface DetailViewController : UIViewController{
+    IBOutlet UILabel *detailFirstName;
+    IBOutlet UILabel *detailLastName;
+    IBOutlet UILabel *detailDescription;
+}
 
 @property (strong, nonatomic) DeveloperModel *detailItem;
+
 
 
 @end
